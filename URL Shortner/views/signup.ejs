@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/login_style.ejs') %>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup Form</h2>
+        <form action="/user" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" class="input-field" required name="name">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input-field" required name="email">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="input-field" required name="password">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

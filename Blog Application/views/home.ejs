@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head') %>
+  <title>Homepage</title>
+  
+  <%-include('./partials/style') %>
+
+</head>
+<body>
+  <%- include('./partials/nav') %>
+
+  <div class="container mt-3">
+    <div class="row row-cols-4">
+      <% blogs.forEach(blog => { %>       <!-- Looping through each blog in the blogs array -->
+      <div class="col">
+        <div class="card">
+          <img src="<%= blog.coverImageURL %>" class="card-img-top" alt="<%= blog.title %>'s Cover Image" />
+          <div class="card-body">
+            <h5 class="card-title"><%= blog.title %></h5>
+            <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>      <!-- this is the link to view the full blog post -->
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <%- include('./partials/script') %>
+</body>
+</html>
+
+
